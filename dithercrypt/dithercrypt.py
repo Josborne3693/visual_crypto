@@ -191,11 +191,12 @@ def encrypt4(img_ab, img_ac, img_ad, img_bc, img_bd, img_cd):
 
     return (out_a, out_b, out_c, out_d)
 
+# (cmd, in_arity, out_arity, func)
 commands = [
-    ('encrypt2', 2, 2, encrypt2),
-    ('steg2', 3, 2, steg2),
-    ('encrypt3', 3, 3, encrypt3),
-    ('encrypt4', 6, 4, encrypt4),
+    ('encrypt2', 1, 2, encrypt2),   # 1 input image, 2 output images
+    ('steg2', 3, 2, steg2),         # 3 input images, 2 output images
+    ('encrypt3', 3, 3, encrypt3),   # 3 input images, 3 output images
+    ('encrypt4', 6, 4, encrypt4),   # 6 input images, 4 output images
 ]
 
 def main(cmd, *args):
